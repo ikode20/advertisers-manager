@@ -26,4 +26,5 @@ This project is a simple advertiser management app built with the latest version
 1. Used service to fetch and store advertisers in a BehaviorSubject, which smart component subscribes to.
 1. Created very basic unit tests for the advertiser-list component. With more time would have added tests for service and improve code coverage
 1. Added very basic validation. Ideally need stricter rules and better messages for validation errors.
+1. Better error handling needed to display a presentable error message to user (more apparent now that usage limit on the API has been reached)
 1. NOT IMPLEMENTED: Ngrx for state management. Felt like overkill so went for simpler BehaviourSubject
