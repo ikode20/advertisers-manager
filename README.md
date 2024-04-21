@@ -1,27 +1,29 @@
-# AdvertisersManager
+# Advertisers Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+This project is a simple advertiser management app built with the latest version of Angular. The allows the user to view the list of advertisers and to create a new advertiser.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Fetches advertisers from the provided API endpoint
+- Displays advertisers in a table
+- Opens a dialog to allow the user to add a new advertiser
 
-## Code scaffolding
+## Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the GitHub repository to your local machine
+2. Navigate to the project directory
+3. Run `npm install` to install the necessary dependencies
+4. Run `ng serve` to start a local development server
+5. Open your browser and navigate to http://localhost:4200/
 
-## Build
+## Development Process
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Scaffolded app with Angular CLI
+1. Created feature folder for advertisers. This should allow codebase to grow and accomodate more features.
+1. Installed Angular Material to display table data.
+1. Added a dumb component for displaying the the new advertiser form in a dialog
+1. Added a smart component for displaying the list of advertiser, fetching data from service and launching dialog
+1. Used service to fetch and store advertisers in a BehaviorSubject, which smart component subscribes to.
+1. Created very basic unit tests for the advertiser-list component. With more time would have added tests for service and improve code coverage
+1. Added very basic validation. Ideally need stricter rules and better messages for validation errors.
+1. NOT IMPLEMENTED: Ngrx for state management. Felt like overkill so went for simpler BehaviourSubject
