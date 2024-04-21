@@ -1,0 +1,37 @@
+<mat-toolbar>
+  <span>Advertisers Manager</span>
+</mat-toolbar>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Column definitions -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let advertiser">{{ advertiser.name }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="orgurl">
+    <mat-header-cell *matHeaderCellDef>Organisation Url</mat-header-cell>
+    <mat-cell *matCellDef="let advertiser">{{ advertiser.orgurl }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="telephone">
+    <mat-header-cell *matHeaderCellDef>Phone</mat-header-cell>
+    <mat-cell *matCellDef="let advertiser">{{ advertiser.telephone }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+    <mat-cell *matCellDef="let advertiser">{{ advertiser.address }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="postcode">
+    <mat-header-cell *matHeaderCellDef>Postcode</mat-header-cell>
+    <mat-cell *matCellDef="let advertiser">{{ advertiser.postcode }}</mat-cell>
+  </ng-container>
+
+  <!-- Table rows -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let advertiser; columns: displayedColumns"></mat-row>
+</mat-table>
+
+<button mat-raised-button color="primary" (click)="openDialog()">Add advertiser</button>

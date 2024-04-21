@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>New Advertiser</h2>
+<mat-dialog-content [formGroup]="newAdvertiserForm">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" />
+    @if (newAdvertiserForm.controls.name.invalid) {
+      <mat-error>Please enter a valid name</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Organisation Url</mat-label>
+    <input matInput formControlName="orgurl" />
+    @if (newAdvertiserForm.controls.name.invalid) {
+      <mat-error>Please enter a valid name</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Phone</mat-label>
+    <input matInput type="tel" formControlName="telephone" />
+    @if (newAdvertiserForm.controls.telephone.invalid) {
+      <mat-error>Please enter a valid phone number</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="address" />
+    @if (newAdvertiserForm.controls.address.invalid) {
+      <mat-error>Please enter a valid address</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <input matInput formControlName="city" />
+    @if (newAdvertiserForm.controls.city.invalid) {
+      <mat-error>Please enter a valid city</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Postcode</mat-label>
+    <input matInput formControlName="postcode" />
+    @if (newAdvertiserForm.controls.postcode.invalid) {
+      <mat-error>Please enter a valid postcode</mat-error>
+    }
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancelClick()">Cancel</button>
+  <button mat-raised-button color="primary" [disabled]="!newAdvertiserForm.valid" (click)="onOkClick()">Ok</button>
+</mat-dialog-actions>
